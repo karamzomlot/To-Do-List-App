@@ -1,0 +1,188 @@
+/* Font Face */
+@font-face{
+    src: url(../fonts/BalooTammudu2-Regular.ttf);
+    font-family: 'Baloo';
+}
+@font-face{
+    src: url(../fonts/Ubuntu-Regular.ttf);
+    font-family: 'Ubuntu';
+}
+
+/* All Page */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Style Container */
+.container{
+    font-family: 'Ubuntu';
+    min-height: 100vh;
+    background-color: #3450A1;
+    padding: 30px 15px;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Style Page Title */
+.main-page .pg-title .title{
+    font-family: 'Baloo';
+    font-size: 35px;
+    text-align: center;
+}
+
+/* Style Task Enter Form */
+.task-enter{
+    position: relative;
+}
+.task-enter .task-input,
+.task-enter .task-add{
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+.task-enter .task-input{
+    width: 100%;
+    height: 45px;
+    background-color: #04195595 ;
+    border-radius: 25px;
+    padding: 10px 20px;
+    color: #b4c8fc;
+    font-size: 15px;
+    padding-top: 10px;
+}
+.task-enter .task-input::placeholder{
+    color: #b4c8fc50;
+    font-size: 15px;
+}
+.task-enter .task-add{
+    width: 35px;
+    height: 35px;
+    background-color: #EB06FF;
+    padding-top: 2px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #FFF;
+    position: absolute;
+    right: 1%;
+    top: 12%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0px #FB06FF;
+}
+
+/* Style title fo view task div */
+.view-task .title-div{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 25px 0;
+    padding: 0 12px;
+}
+
+/* Styel No task Message */
+.view-task .no-task-msg{
+    border-radius: 15px;
+    background-color: #041955;
+    padding: 18px 12px;
+    margin: 25px 0;
+}
+
+/* Style Tasks List */
+.view-task .tasks-list{
+    list-style-type: none;
+}
+
+/* Style Single Task */
+.view-task .tasks-list .single-task{
+    display: flex;
+    background-color: #041955;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 10px 0;
+    transition: opacity .7s;
+}
+.tasks-list .single-task .done-btn{
+    flex-basis: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: none;
+    border-right: 3px solid #3450A1;
+    font-size: 20px;
+    cursor: pointer;
+    color: #237AFD;
+    padding: 7px;
+}
+.tasks-list .single-task .task-name{
+    flex-basis: 85%;
+    padding: 17px 10px;
+    border-right: 3px solid #3450A1;
+    letter-spacing: 1px;
+}
+.tasks-list .single-task .trash-btn{
+    flex-basis: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    background: none;
+    color: #ff063c;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 7px;
+
+}
+.single-task .not-done-icon,
+.single-task .done-icon,
+.single-task .trash-icon{
+    pointer-events: none;
+}
+.single-task .done-icon{
+    display: none;
+}
+.single-task .not-done-icon{
+    display: block;
+}
+/* When Task is Done */
+.single-task.done-task{
+    opacity: .4;
+}
+.single-task.done-task .task-name{
+    text-decoration: line-through;
+}
+.single-task.done-task .done-icon{
+    display: block;
+}
+.single-task.done-task .not-done-icon{
+    display: none;
+}
+/* Styel Coutns Task Div */
+.counts{
+    margin-top: 40px;
+    display: none
+}
+.counts .all-tasks,
+.counts .done-tasks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    background-color: #b4c8fc50;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #041955;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.counts .all-num,
+.counts .done-num{
+    color: #ff063c;
+    background-color: #041955;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

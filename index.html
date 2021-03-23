@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List App</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- CSS Fiels -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+    <!-- Start Container -->
+    <div class="container">
+        <!-- Start Main Page -->
+        <main class="main-page">
+            <div class="pg-title">
+                <h1 class="title">To Do List App</h1>
+            </div> <!-- End Page Title -->
+            <form class="task-enter" onsubmit="return false">
+                <input class="task-input" type="text" placeholder="Type Your Task Here...">
+                <button class="task-add">
+                    <i class="fas fa-plus add-icon"></i>
+                </button>
+            </form> <!-- End Form to Enter Task -->
+            <!-- Start View Task Div -->
+            <div class="view-task">
+                <h3 class="title-div">Tasks To Do</h3>
+                <div class="no-task-msg">
+                    <p>No Tasks Added To Show.</p>
+                </div> <!-- End No Task Message-->
+                <!-- Start Tasks List -->
+                <ul class="tasks-list">
+                <!-- 
+                    <li class="single-task">
+                        <button class="done-btn">
+                            <span class="done-icon far fa-check-circle"></span>
+                        </button>
+                        <p class="task-name">Record AWD Lecture</p>
+                        <button class="trash-btn">
+                            <span class="trash-icon far fa-trash-alt"></span>
+                        </button>
+                    </li>
+                -->
+                </ul>
+                <!-- Start Counts Div -->
+                <div class="counts">
+                    <!-- All Tasks -->
+                    <div class="all-tasks">
+                        <p class="all-name">All Tasks</p>
+                        <span class="all-num">0</span>
+                    </div>
+                    <!-- Done Tasks-->
+                    <div class="done-tasks">
+                        <p class="done-name">Completed Tasks</p>
+                        <span class="done-num">0</span>
+                    </div>
+                </div>
+            </div> <!-- End View Task Div-->
+        </main> <!-- End Main Page-->
+    </div> <!-- End Container -->
+    <!-- Js Files -->
+    <script src="js/main.js"></script>
+</body>
+</html>
